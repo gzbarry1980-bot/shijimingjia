@@ -95,8 +95,17 @@ function defaultDb() {
   };
 }
 
+function blobStore() {
+  const siteID = process.env.NETLIFY_BLOBS_SITE_ID || process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
+  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN;
+  if (siteID && token) {
+    return getStore({ name: STORE_NAME, siteID, token });
+  }
+  return getStore({ name: STORE_NAME });
+}
+
 async function readDb() {
-  const store = getStore(STORE_NAME);
+  const store = blobStore();
   const existing = await store.get(DB_KEY, { type: "json" });
   if (existing) return existing;
   const created = defaultDb();
@@ -105,7 +114,7 @@ async function readDb() {
 }
 
 async function writeDb(db) {
-  const store = getStore(STORE_NAME);
+  const store = blobStore();
   await store.setJSON(DB_KEY, db);
 }
 
