@@ -3,9 +3,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
-import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DB_KEY = "db";
 const STORE_NAME = "sjmj-db";
 const SESSION_COOKIE = "sjmj_session";
@@ -26,7 +24,16 @@ function json(statusCode, body, headers = {}) {
 }
 
 function loadSeedProducts() {
-  const source = fs.readFileSync(path.join(__dirname, "../../data-store.js"), "utf8");
+  const candidates = [
+    path.join(process.cwd(), "data-store.js"),
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "data-store.js"),
+    path.join(process.env.NETLIFY_FUNCTIONS_SRC || "", "../../data-store.js"),
+  ].filter(Boolean);
+  const dataStorePath = candidates.find((candidate) => fs.existsSync(candidate));
+  if (!dataStorePath) {
+    throw new Error("data-store.js seed file not found in Netlify function bundle.");
+  }
+  const source = fs.readFileSync(dataStorePath, "utf8");
   const storage = new Map();
   const context = {
     localStorage: {
