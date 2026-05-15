@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiJi MingJia Chenpi Tea | Independent Store</title>
+  <meta name="description" content="Shop ShiJi MingJia Xinhui chenpi pu'er tea, mandarin pu'er, and gift tea sets for international customers.">
+  <meta name="theme-color" content="#4b2417">
+  <meta property="og:title" content="ShiJi MingJia Chenpi Tea">
+  <meta property="og:description" content="Xinhui chenpi pu'er tea, mandarin pu'er, and gift tea sets for international customers.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/chenpi-hero.png">
+  <link rel="preload" href="assets/chenpi-hero.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "ShiJi MingJia Chenpi Tea",
+      "description": "Independent store for Xinhui chenpi pu'er tea, mandarin pu'er, and gift tea sets.",
+      "image": "assets/chenpi-hero.png",
+      "paymentAccepted": "PayPal",
+      "currenciesAccepted": "USD",
+      "areaServed": "Worldwide"
+    }
+  </script>
+</head>
+<body>
+  <div class="topline" data-i18n="topline">International chenpi tea store · PayPal checkout ready · TikTok exclusive bundles coming soon</div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ShiJi MingJia home">
+      <span class="brand-mark">茗</span>
+      <span data-i18n="brand">ShiJi MingJia</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#shop" data-i18n="navShop">Shop</a>
+      <a href="#origin" data-i18n="navOrigin">Why Chenpi</a>
+      <a href="#tiktok" data-i18n="navTiktok">TikTok Picks</a>
+      <a href="#faq" data-i18n="navFaq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Language switcher">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="yue">粵語</button>
+      </div>
+      <button class="cart-button" type="button" aria-label="Open cart">
+        <span data-i18n="cartButton">Cart</span> <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">Xinhui chenpi · ripe pu'er · tea gifts</p>
+        <h1 id="hero-title" data-i18n="heroTitle">A warm citrus pu'er ritual, shipped from China to your cup.</h1>
+        <p class="hero-text" data-i18n="heroText">Century-old-style chenpi aroma meets smooth ripe pu'er. Build your first box, restock daily tea, or send a refined Chinese tea gift to someone who appreciates flavor with depth.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#shop" data-i18n="heroPrimary">Shop chenpi tea</a>
+          <a class="btn ghost" href="#tiktok" data-i18n="heroSecondary">View TikTok bundles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Store benefits">
+      <div><strong data-i18n="trust1Title">PayPal</strong><span data-i18n="trust1Text">Card-friendly checkout</span></div>
+      <div><strong data-i18n="trust2Title">Global</strong><span data-i18n="trust2Text">International shipping setup</span></div>
+      <div><strong data-i18n="trust3Title">Secure</strong><span data-i18n="trust3Text">Independent store experience</span></div>
+      <div><strong data-i18n="trust4Title">Giftable</strong><span data-i18n="trust4Text">Tea boxes for holidays</span></div>
+    </section>
+
+    <section class="brand-proof" aria-label="Brand proof">
+      <div class="proof-copy">
+        <p class="eyebrow" data-i18n="proofEyebrow">Brand foundation</p>
+        <h2 data-i18n="proofTitle">From Xinhui orchards to international tea buyers.</h2>
+        <p data-i18n="proofText">ShiJi MingJia focuses on Xinhui chenpi tea with a full-chain model covering cultivation, research, production, storage, and sales. The storefront turns that brand story into overseas-ready products and checkout.</p>
+      </div>
+      <div class="proof-grid">
+        <article><strong>2006</strong><span data-i18n="proof1">Brand origin year</span></article>
+        <article><strong>10,000+</strong><span data-i18n="proof2">Mu owned and partner orchards</span></article>
+        <article><strong>96</strong><span data-i18n="proof3">Mu organic citrus orchard</span></article>
+        <article><strong>33/36</strong><span data-i18n="proof4">Tea and chenpi process standards</span></article>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-i18n="shopEyebrow">Full product catalog</p>
+          <h2 data-i18n="shopTitle">A richer catalog for self-drinking, gifting, collecting, and TikTok discovery.</h2>
+        </div>
+        <p class="catalog-count" id="catalogCount" aria-live="polite"></p>
+      </div>
+
+      <div class="shop-tools" aria-label="Product filters">
+        <label class="search-box">
+          <span data-i18n="searchLabel">Search products</span>
+          <input id="productSearch" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search by product, SKU, or use case">
+        </label>
+        <div class="category-tabs" role="tablist" aria-label="Product category">
+          <button type="button" role="tab" class="active" data-filter="all" aria-selected="true" data-i18n="filterAll">All</button>
+          <button type="button" role="tab" data-filter="gift" aria-selected="false" data-i18n="filterGift">Gift sets</button>
+          <button type="button" role="tab" data-filter="daily" aria-selected="false" data-i18n="filterDaily">Daily tea</button>
+          <button type="button" role="tab" data-filter="aged" aria-selected="false" data-i18n="filterAged">Aged chenpi</button>
+          <button type="button" role="tab" data-filter="bags" aria-selected="false" data-i18n="filterBags">Tea bags</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="split-section" id="origin">
+      <div class="split-copy">
+        <p class="eyebrow" data-i18n="originEyebrow">Why customers buy it</p>
+        <h2 data-i18n="originTitle">Chenpi pu'er is easy to explain and easy to remember.</h2>
+        <p data-i18n="originText">Xinhui dried mandarin peel brings a fragrant citrus note; ripe pu'er brings a smooth, dark, mellow base. That makes the product easier for overseas customers to understand than many traditional teas, especially through short-form video.</p>
+        <a class="btn secondary" href="#shop" data-i18n="originButton">Build a starter box</a>
+      </div>
+      <div class="origin-panel" aria-label="Product positioning">
+        <div>
+          <strong data-i18n="originCard1Title">Beginner-friendly story</strong>
+          <span data-i18n="originCard1Text">Citrus peel plus ripe pu'er is concrete, visual, and simple to demonstrate.</span>
+        </div>
+        <div>
+          <strong data-i18n="originCard2Title">Strong repeat potential</strong>
+          <span data-i18n="originCard2Text">Daily after-meal tea, office mug brewing, and cold-weather simmering all support reorders.</span>
+        </div>
+        <div>
+          <strong data-i18n="originCard3Title">Gift value</strong>
+          <span data-i18n="originCard3Text">Chinese tea culture, Xinhui chenpi, and gift packaging create a higher perceived value.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band" id="tiktok">
+      <div>
+        <p class="eyebrow" data-i18n="tiktokEyebrow">Content channel ready</p>
+        <h2 data-i18n="tiktokTitle">TikTok traffic needs fast product hooks.</h2>
+      </div>
+      <div class="gift-grid">
+        <article>
+          <span class="mini-icon cup"></span>
+          <h3 data-i18n="hook1Title">What is chenpi tea?</h3>
+          <p data-i18n="hook1Text">Show dried mandarin peel, rinse the tea, and pour the amber soup in the first three seconds.</p>
+        </article>
+        <article>
+          <span class="mini-icon kettle"></span>
+          <h3 data-i18n="hook2Title">Simmer ritual</h3>
+          <p data-i18n="hook2Text">Film the peel opening in hot water, steam rising, and the color turning deeper over time.</p>
+        </article>
+        <article>
+          <span class="mini-icon note"></span>
+          <h3 data-i18n="hook3Title">Gift angle</h3>
+          <p data-i18n="hook3Text">Position the gift set for parents, tea lovers, hosts, and Lunar New Year occasions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reviews" id="faq">
+      <div class="section-heading compact">
+        <p class="eyebrow" data-i18n="faqEyebrow">FAQ for international buyers</p>
+        <h2 data-i18n="faqTitle">Reduce hesitation before checkout.</h2>
+      </div>
+      <div class="review-grid">
+        <figure>
+          <blockquote data-i18n="faq1Text">Does it contain caffeine? Yes. Chenpi pu'er usually includes ripe pu'er tea, so it is not caffeine-free.</blockquote>
+          <figcaption data-i18n="faq1Title">Caffeine</figcaption>
+        </figure>
+        <figure>
+          <blockquote data-i18n="faq2Text">How do I brew it? Use hot water, rinse once if preferred, then steep repeatedly. It can also be simmered.</blockquote>
+          <figcaption data-i18n="faq2Title">Brewing</figcaption>
+        </figure>
+        <figure>
+          <blockquote data-i18n="faq3Text">Where do I pay? The store is designed for PayPal checkout and card-friendly overseas payment.</blockquote>
+          <figcaption data-i18n="faq3Title">Payment</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-label="Checkout call to action">
+      <div>
+        <p class="eyebrow" data-i18n="checkoutEyebrow">Checkout flow</p>
+        <h2 data-i18n="checkoutTitle">Add products to cart, then connect the PayPal button when your account is ready.</h2>
+      </div>
+      <button class="btn store-cta" type="button" data-open-cart data-i18n="openCart">Open cart</button>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+    <div class="cart-panel">
+      <div class="cart-head">
+        <h2 data-i18n="cartTitle">Your Cart</h2>
+        <button type="button" data-close-cart aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart" data-i18n="emptyCart">Your cart is empty.</p>
+      </div>
+      <div class="cart-total">
+        <span data-i18n="subtotal">Subtotal</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="paypal-button" type="button" data-i18n="paypalButton">Checkout with PayPal</button>
+      <p class="cart-note" data-i18n="cartNote">Demo checkout button. Replace with your PayPal integration or ecommerce backend before going live.</p>
+    </div>
+  </aside>
+
+  <aside class="detail-modal" aria-hidden="true" aria-label="Product detail">
+    <div class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="detail-close" type="button" data-close-detail aria-label="Close product detail">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <p data-i18n="footerBrand">ShiJi MingJia Independent Store</p>
+    <div>
+      <a href="#shop" data-i18n="navShop">Shop</a>
+      <a href="#origin" data-i18n="navOrigin">Why Chenpi</a>
+      <a href="#tiktok" data-i18n="footerTiktok">TikTok</a>
+      <a href="#faq" data-i18n="navFaq">FAQ</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </footer>
+
+  <script src="data-store.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

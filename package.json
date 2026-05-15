@@ -1,0 +1,16 @@
+{
+  "name": "shiji-mingjia-independent-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ShiJi MingJia independent store with public storefront and server-backed admin portal.",
+  "scripts": {
+    "start": "node server.js",
+    "netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

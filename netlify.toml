@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/sjmj-admin-portal"
+  to = "/admin.html"
+  status = 200
+
+[[redirects]]
+  from = "/sjmj-admin-portal/"
+  to = "/admin.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["data-store.js"]
